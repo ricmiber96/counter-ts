@@ -3,10 +3,10 @@ import { CounterContextType, counterReducer } from "../reducer/CounterReducer";
 
 
 // Create the context
-    export const CounterContext = createContext<CounterContextType | undefined>(undefined);
-    
+export const CounterContext = createContext<CounterContextType | undefined>(undefined);
+
   // Create the context provider
-  export const CounterProvider: React.FC<{ children: ReactNode }> = ({
+export const CounterProvider: React.FC<{ children: ReactNode }> = ({
     children,
   }) => {
     const [state, dispatch] = useReducer(counterReducer, { count: 0 });
